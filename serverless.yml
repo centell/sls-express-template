@@ -1,0 +1,32 @@
+# serverless.yml
+service: sls-express-template
+
+# Provider #
+provider:
+  name: aws
+  runtime: nodejs10.x
+  state: dev
+  region: us-east-1
+
+functions:
+  express:
+    handler: app.handler
+    events:
+      - http:
+          path: api
+          method: get
+      - http:
+          path: api/{id}
+          method: get
+      - http:
+          path: api
+          method: post
+      - http:
+          path: api/{id}
+          method: put
+      - http:
+          path: api/{id}
+          method: delete
+
+plugins:
+  - serverless-offline

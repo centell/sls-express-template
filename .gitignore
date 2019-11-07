@@ -1,0 +1,22 @@
+### macOS ###
+.DS_Store
+.AppleDouble
+.LSOverride
+
+### IDE ###
+.idea
+.code
+.vscode
+
+### Environment ###
+.envrc
+.direnv
+.env
+.env.test
+
+## package directories ##
+node_modules
+jspm_packages
+
+## Serverless directories ##
+.serverless
